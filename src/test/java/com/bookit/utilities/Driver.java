@@ -32,7 +32,7 @@ public class Driver {
      */
     public synchronized static WebDriver getDriver() {
         //String GRID_URL = "http://35.171.158.59:4444/wd/hub";
-        String GRID_URL = "http://192.168.1.14:4444/wd/hub";
+        String GRID_URL = "http://100.26.218.148:4444/wd/hub";
 
 
 
