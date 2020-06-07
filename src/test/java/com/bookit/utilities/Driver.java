@@ -31,7 +31,11 @@ public class Driver {
      * @return
      */
     public synchronized static WebDriver getDriver() {
-        String GRID_URL = "http://35.171.158.59:4444/wd/hub";
+        //String GRID_URL = "http://35.171.158.59:4444/wd/hub";
+        String GRID_URL = "http://192.168.1.14:4444/wd/hub";
+
+
+
         //if webdriver object doesn't exist
         //create it
         if (driverPool.get() == null) {
@@ -65,19 +69,19 @@ public class Driver {
                         //we create object of URL and specify
                         //selenium grid hub as a parameter
                         //make sure it ends with /wd/hub
-                        URL url = new URL(GRID_URL);
+                        URL url = new URL("http://localhost:4444/wd/hub");
                         //desiredCapabilities used to specify what kind of node
                         //is required for testing
                         //such as: OS type, browser, version, etc...
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName(BrowserType.CHROME);
                         desiredCapabilities.setPlatform(Platform.ANY);
-
                         driverPool.set(new RemoteWebDriver(url, desiredCapabilities));
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                     break;
+
                 case "firefox-remote":
                     try {
                         //we create object of URL and specify

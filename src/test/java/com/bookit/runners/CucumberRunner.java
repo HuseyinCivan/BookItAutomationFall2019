@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
         plugin = {
                 "json:target/cucumber.json"
         },
-        tags = "@api",
-        dryRun = true
+        tags = "@ui",
+        dryRun = false
 
 
 
