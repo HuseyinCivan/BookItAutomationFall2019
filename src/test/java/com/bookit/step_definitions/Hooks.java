@@ -27,9 +27,9 @@ public class Hooks {
      * This hook will be executed only for scenarios that are annotated with @ui tag
      */
     @Before("@ui")
-    public void uiSetup(){
-        Driver.getDriver().manage().window().maximize();
-    }
+//    public void uiSetup(){
+//        Driver.getDriver().manage().window().maximize();
+//    }
     /**
      * This hook will be executed only for scenarios that are annotated with @ui tag
      */

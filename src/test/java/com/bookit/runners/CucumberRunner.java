@@ -12,8 +12,9 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json"
 
         },
-//        tags = "@ui",
-        dryRun = false
+       // tags = "@api",
+        dryRun = false,
+        strict = true
 
 )
 public class CucumberRunner {
